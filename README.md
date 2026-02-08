@@ -1,6 +1,6 @@
 # Split Bill Application
 
-This repository contains AI-based application for splitting-bill, written on python (streamlit) and can be run on your local computer. 
+This project compares two models for extracting structured data from receipt images: Donut and DocTR.
 
 Courtesy of: https://github.com/MukhlasAdib
 
@@ -92,3 +92,7 @@ with uv:
 ```bash
     uv run streamlit run app.py
 ```
+
+## Example of Output
+
+1. Donut
