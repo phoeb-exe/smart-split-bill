@@ -123,7 +123,7 @@ with uv:
 2. docTR:
 - Berhasil membaca bill kedua, namun: terdapat item tidak terbaca (misalnya Delfi), satu item terbaca kurang jelas (Sedaap), tidak mampu mendeteksi total belanja
 - Sensitif terhadap lighting dan kualitas foto
-- Jauh lebih cepat (9–10 detik)
+- Jauh lebih cepat (9-10 detik)
 
 ## Alasan Pemilihan Model
 
@@ -134,7 +134,7 @@ with uv:
 ## Evaluasi Kualitatif
 
 1. Model Pembaca Bill
-    - Kepatan:
+    - Kecepatan:
     docTR lebih cepat, Donut lebih lambat
 
     - Akurasi:
@@ -158,6 +158,4 @@ Pop-up hasil ekstraksi yang tertutup jika memakai scroll bar
 ## Ide Improvement
 - Menambahkan image preprocessing (brightness, contrast)
 - Fine-tuning Donut dengan variasi bill lokal
-- Mengkombinasikan OCR + post-processing untuk meningkatkan akurasi total.
-
-1. Donut
+- Mengkombinasikan OCR + post-processing untuk meningkatkan akurasi total
