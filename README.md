@@ -1,6 +1,6 @@
 # Split Bill Application
 
-This project compares two models for extracting structured data from receipt images: Donut and DocTR.
+This project compares two models for extracting structured data from receipt images: Donut and docTR.
 
 Courtesy of: https://github.com/MukhlasAdib
 
@@ -93,6 +93,71 @@ with uv:
     uv run streamlit run app.py
 ```
 
-## Example of Output
+## Video Demo
+
+## Hasil Ekstraksi Model
+
+- Donut (Receipt 1)
+
+  ![donut1](figs/donut_receipt1.png)
+
+- Donut (Receipt 2)
+
+  ![donut2](figs/donut_receipt2.png)
+
+- docTR (Receipt 1)
+
+  ![doctr1](figs/doctr_receipt1.png)
+
+- docTR (Receipt 2)
+
+  ![doctr2](figs/doctr_receipt2.png)
+  
+## Hasil Analisis Model
+
+1. Donut:
+- Tidak berhasil membaca bill kedua
+- Kurang fleksibel terhadap variasi layout bill
+- Kecepatan relatif lambat (39 detik)
+
+2. docTR:
+- Berhasil membaca bill kedua, namun: terdapat item tidak terbaca (misalnya Delfi), satu item terbaca kurang jelas (Sedaap), tidak mampu mendeteksi total belanja
+- Sensitif terhadap lighting dan kualitas foto
+- Jauh lebih cepat (9–10 detik)
+
+## Alasan Pemilihan Model
+
+1. Donut: Dipilih karena merupakan model end-to-end yang langsung mengubah gambar menjadi structured data, sehingga secara konsep lebih efisien.
+
+2. docTR: Dipilih karena mampu menangani layout bill yang kompleks dan lebih fleksibel terhadap variasi struktur dokumen
+
+## Evaluasi Kualitatif
+
+1. Model Pembaca Bill
+    - Kepatan:
+    docTR lebih cepat, Donut lebih lambat
+
+    - Akurasi:
+    docTR belum 100% akurat (missing item dan gagal baca total) sedangkan Donut belum berhasil mengekstrak bill lain
+
+2. Produk Web
+
+   Fitur utama sudah berjalan sesuai alur namun masih terdapat bug UX, terutama pada pop-up hasil ekstraksi yang tertutup jika memakai scroll bar
+
+## Kelemahan 
+
+1. Model Pembaca Bill
+- Sangat sensitif terhadap lighting dan kualitas gambar
+- Teks “Total” pada bill kedua gagal terdeteksi
+- Donut tidak robust terhadap variasi bill di luar data latih
+
+2. Produk Web
+
+Pop-up hasil ekstraksi yang tertutup jika memakai scroll bar
+
+## Ide Improvement
+- Menambahkan image preprocessing (brightness, contrast)
+- Fine-tuning Donut dengan variasi bill lokal
+- Mengkombinasikan OCR + post-processing untuk meningkatkan akurasi total.
 
 1. Donut
