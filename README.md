@@ -93,7 +93,9 @@ with uv:
     uv run streamlit run app.py
 ```
 
-## Video Demo
+## Demo Video
+
+[GDrive](https://drive.google.com/file/d/1rxxo9BSJJhJYQBuqnZDkkhdYfvM7PZg5/view?usp=sharing)
 
 ## Hasil Ekstraksi Model
 
